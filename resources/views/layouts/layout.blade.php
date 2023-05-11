@@ -42,6 +42,11 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('home') }}">
+                    <i class="fas fa-fw fa-home"></i><span>Beranda</span>
+                </a>
+            </li>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -49,11 +54,11 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder-open"></i>
-                    <span>Menu Utama 1</span>
+                    <span>Data Master</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 1</a>
+                        <a class="collapse-item fas fa-arrow-circleright" href="{{ route('user') }}"> Master User</a>
                         <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 2</a>
                         <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 3</a>
                         <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 4</a>
