@@ -13,7 +13,7 @@
         </div>
         <div class="col-md-5">
             <label for="nama">Nama Lengkap</label>
-            <input id="nama" type="text" name="nama" class="formcontrol" required>
+            <input id="nama" type="text" name="nama" class="form-control" required>
         </div>
         <div class="form-group row">
             <div class="col-md-5">
@@ -27,7 +27,7 @@
             <div class="form-group row">
                 <div class="col-md-5">
                     <label for="passw">Password</label>
-                    <input id="passw" type="password" name="passw" class="formcontrol"required>
+                    <input id="passw" type="password" name="passw" class="form-control"required>
                 </div>
             </div>
             <div class="col-md-10">

@@ -6,8 +6,8 @@
 </div>
 <hr>
 <div class="card-header py-3" align="right">
-    <button class="btn btn-primary btn-sm btn-flat" data-toggle="modal" datatarget="#modal-add">
-        <i class="fa fa-plus"></i>Tambah
+    <button class="btn btn-primary btn-sm btn-flat" data-toggle="modal" data-target="#modal-add">
+        <i class="fa fa-plus"></i> Tambah
     </button>
 </div>
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -47,7 +47,7 @@
 </div>
 
 <!-- modal add data-->
-<div class="modal inmodal fade" id="modal-add" tabindex="-1" role="dialog" ariahidden="true">
+<div class="modal inmodal fade" id="modal-add" tab-index="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-xs">
         <form name="frm_add" id="frm_add" class="form-horizontal" action="#" method="POST" enctype="multipart/form-data">
             @csrf
@@ -67,7 +67,7 @@
                         <div class="form-group">
                             <label class="col-lg-20 control-label">Roles/Akses</label>
                             <div class="col-lg-10">
-                                <select id="roles" name="roles" class="formcontrol" required>
+                                <select id="roles" name="roles" class="form-control" required>
                                     <option value="">--Pilih Roles--</option>
                                     <option value="admin">Admin</option>
                                     <option value="user">User</option>
@@ -76,7 +76,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-light" datadismiss="modal">Tutup</button>
+                        <button type="button" class="btn btn-light" data-dismiss="modal">Tutup</button>
                         <button type="submit" class="btn btnprimary">Simpan</button>
                     </div>
                 </div>
