@@ -58,7 +58,7 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item fas fa-arrow-circleright" href="{{ route('user') }}"> Master User</a>
+                        <a class="collapse-item fas fa-arrow-circleright" href="{{ route('user.index') }}"> Master User</a>
                         <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 2</a>
                         <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 3</a>
                         <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 4</a>

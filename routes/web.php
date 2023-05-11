@@ -23,5 +23,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/user', [UserController::class, 'index'])->name('user');
-Route::get('/user/edit/{id}',[UserController::class, 'index'])->name('user.edit');
-Route::get('/user/hapus/{id}' , 'userController@destroy' );
+Route::resource('user', UserController::class)->parameters([
+    'user' => 'id'
+]);
+// Route::get('/user/hapus/{id}' , 'userController@destroy' );
