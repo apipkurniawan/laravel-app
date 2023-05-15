@@ -115,6 +115,7 @@ class UserController extends Controller
         $hapus = User::findOrFail($id);
         $hapus->delete();
         $hapus->removeRole('admin','user');
+        toast('Data berhasil dihapus!');
         return redirect()->route('user.index');
     }
 }

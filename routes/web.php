@@ -27,7 +27,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // User
 Route::resource('/user', UserController::class);
-// Route::delete('/user/{id}' , [UserController::class, 'destroy'] );
 
 // Barang
 Route::get('/barang', [BarangController::class, 'index'])->name('barang');
