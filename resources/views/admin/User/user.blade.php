@@ -62,29 +62,32 @@
                     <h4 class="modal-title">Tambah Data User</h4>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group"><label class="col-lg-20 controllabel">Nama User</label>
+                    <div class="form-group">
+                        <label class="col-lg-20 controllabel">Nama User</label>
                         <div class="col-lg-10">
                             <input type="text" name="username" required class="form-control">
                         </div>
+                    </div>
                     <div class="form-group">
                         <label class="col-lg-20 controllabel">Email User</label>
                         <div class="col-lg-10">
-                            <input type="email" name="email" required class="form-control"></div>
-                        <div class="form-group">
-                            <label class="col-lg-20 control-label">Roles/Akses</label>
-                            <div class="col-lg-10">
-                                <select id="roles" name="roles" class="form-control" required>
-                                    <option value="">--Pilih Roles--</option>
-                                    <option value="admin">Admin</option>
-                                    <option value="user">User</option>
-                                </select>
-                            </div>
+                            <input type="email" name="email" required class="form-control">
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-light" data-dismiss="modal">Tutup</button>
-                        <button type="submit" class="btn btnprimary">Simpan</button>
+                    <div class="form-group">
+                        <label class="col-lg-20 control-label">Roles/Akses</label>
+                        <div class="col-lg-10">
+                            <select id="roles" name="roles" class="form-control" required>
+                                <option value="">--Pilih Roles--</option>
+                                <option value="admin">Admin</option>
+                                <option value="user">User</option>
+                            </select>
+                        </div>
                     </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Tutup</button>
+                    <button type="submit" class="btn btnprimary">Simpan</button>
                 </div>
             </div>
         </form>
