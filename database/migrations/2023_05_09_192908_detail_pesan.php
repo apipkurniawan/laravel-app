@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('detail_pesan', function (Blueprint $table) {
-            $table->string('no_pesan',14)->primary();
-            $table->string('kd_brg',5);
+            $table->string('no_pesan',25);
+            $table->string('kd_brg',10);
             $table->integer('qty_pesan');
             $table->integer('Subtotal');
         });

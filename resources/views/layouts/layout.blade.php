@@ -69,23 +69,21 @@
                 </div>
                 @endrole
             </li>
-            <!-- <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages1"
                     aria-expanded="true" aria-controls="collapsePages1">
                     <i class="fas fa-fw fa-folder-open"></i>
-                    <span>Menu Utama 2</span>
+                    <span>Transaksi</span>
                 </a>
                 <div id="collapsePages1" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 1</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 2</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 3</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 4</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 5</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('transaksi.index') }}"> Pemesanan</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Pembelian</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Retur</a>
                     </div>
                 </div>
-            </li> -->
+            </li>
 
             <!-- Nav Item - Tables -->
             <!-- <li class="nav-item">

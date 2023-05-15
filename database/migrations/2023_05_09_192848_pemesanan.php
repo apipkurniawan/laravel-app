@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('pemesanan', function (Blueprint $table) {
-            $table->string('no_pesan',14)->primary();
+            $table->string('no_pesan',25)->primary();
             $table->date('tgl_pesan');
             $table->integer('Total');
             $table->string('kd_supp',5);
