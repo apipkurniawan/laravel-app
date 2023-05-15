@@ -53,7 +53,7 @@ class UserController extends Controller
             $save_user->assignRole('user');
         }
         $save_user->save();
-        Alert::success('Pesan ','Data berhasil disimpan');
+        Alert::success('Informasi ','Data berhasil disimpan!');
         return redirect()->route('user.index');
     }
 
@@ -80,8 +80,6 @@ class UserController extends Controller
         $user = User::find($id);
         $roles = Role::pluck('name')->all();
         $userRole = $user->roles->pluck('name')->all();
-        // Alert::success('Pesan ','Data berhasil diubah');
-        alert()->success('SuccessAlert','Lorem ipsum dolor sit amet.');
         return view('admin.user.editUser',compact('user','roles','userRole'));
     }
 
@@ -97,6 +95,7 @@ class UserController extends Controller
         $user = User::find($id);
         DB::table('model_has_roles')->where('model_id',$id)->delete();
         $user->assignRole($request->input('role'));
+        Alert::success('Informasi ','Data berhasil diubah!');
         return redirect()->route('user.index');
     }
 
