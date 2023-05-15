@@ -30,5 +30,4 @@ Route::resource('/user', UserController::class);
 
 // Barang
 Route::resource('/barang', BarangController::class);
-// Route::get('/barang/hapus/{id}','barangController@destroy');
 
