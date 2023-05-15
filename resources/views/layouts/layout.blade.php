@@ -79,7 +79,7 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('transaksi.index') }}"> Pemesanan</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Pembelian</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('pembelian.index') }}"> Pembelian</a>
                         <a class="collapse-item fas fa-arrow-circle-right" href="#"> Retur</a>
                     </div>
                 </div>
