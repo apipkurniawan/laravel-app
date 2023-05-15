@@ -29,6 +29,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('/user', UserController::class);
 
 // Barang
-Route::get('/barang', [BarangController::class, 'index'])->name('barang');
-Route::get('/barang/hapus/{id}','barangController@destroy');
+Route::resource('/barang', BarangController::class);
+// Route::get('/barang/hapus/{id}','barangController@destroy');
 
