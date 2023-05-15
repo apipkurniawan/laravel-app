@@ -7,8 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
-Use alert;
-use RealRashid\SweetAlert\Facades\Alert as FacadesAlert;
+use RealRashid\SweetAlert\Facades\Alert;
 use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
@@ -54,6 +53,7 @@ class UserController extends Controller
             $save_user->assignRole('user');
         }
         $save_user->save();
+        Alert::success('Pesan ','Data berhasil disimpan');
         return redirect()->route('user.index');
     }
 
@@ -80,6 +80,8 @@ class UserController extends Controller
         $user = User::find($id);
         $roles = Role::pluck('name')->all();
         $userRole = $user->roles->pluck('name')->all();
+        // Alert::success('Pesan ','Data berhasil diubah');
+        alert()->success('SuccessAlert','Lorem ipsum dolor sit amet.');
         return view('admin.user.editUser',compact('user','roles','userRole'));
     }
 
