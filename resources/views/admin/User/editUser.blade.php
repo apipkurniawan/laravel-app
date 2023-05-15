@@ -1,4 +1,5 @@
 @extends('layouts.layout')
+
 @section('content')
 <form action="{{route('user.update', [$user->id])}}" method="POST">
     @csrf
@@ -39,8 +40,8 @@
         </div>
     </fieldset>
     <div class="col-md-10">
-       <input type="submit" class="btn btn-success btn-send" value="Ubah Akses">
-        <a href="{{ route('user.index') }}"><input type="Button" class="btn btnprimary btn-send" value="Kembali"></a>
+        <input type="submit" class="btn btn-success btn-send" value="Ubah Akses">
+        <a href="{{ route('user.index') }}"><input type="Button" class="btn btn-primary btn-send" value="Kembali"></a>
     </div>
     <hr>
 </form>
