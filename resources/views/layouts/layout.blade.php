@@ -58,8 +58,8 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item fas fa-arrow-circleright" href="{{ route('user.index') }}"> Master User</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 2</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('user.index') }}"> Master User</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('barang') }}"> Master Barang</a>
                         <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 3</a>
                         <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 4</a>
                         <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 5</a>
@@ -67,7 +67,7 @@
                 </div>
                 @endrole
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages1"
                     aria-expanded="true" aria-controls="collapsePages1">
                     <i class="fas fa-fw fa-folder-open"></i>
@@ -83,20 +83,22 @@
                         <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 5</a>
                     </div>
                 </div>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Menu Utama 3</span></a>
-            </li>
+                    <span>Menu Utama 3</span>
+                </a>
+            </li> -->
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-archive"></i>
-                    <span>Menu Utama 4</span></a>
-            </li>
+                    <span>Menu Utama 4</span>
+                </a>
+            </li> -->
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">

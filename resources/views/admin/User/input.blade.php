@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+<!-- @extends('layouts.layout')
 
 @section('content')
 <form action="{{route('user.store')}}" method="POST">
@@ -38,4 +38,4 @@
         <hr>
     </fieldset>
 </form>
-@endsection
+@endsection -->

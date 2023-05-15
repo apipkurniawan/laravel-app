@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BarangController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +22,17 @@ Route::get('/', function () {
 
 Auth::routes();
 
+// home
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// User
 Route::get('/user', [UserController::class, 'index'])->name('user');
 Route::resource('user', UserController::class)->parameters([
     'user' => 'id'
 ]);
 // Route::get('/user/hapus/{id}' , 'userController@destroy' );
+
+// Barang
+Route::get('/barang', [BarangController::class, 'index'])->name('barang');
+Route::get('/barang/hapus/{id}','barangController@destroy');
+
