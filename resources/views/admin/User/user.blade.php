@@ -35,9 +35,15 @@
                         <a href="{{route('user.edit' ,[$row->id])}}" class="d-none d-sm-inline-block btn btn-sm btn-success shadowsm">
                             <i class="fas fa-edit fa-sm text-white-50"></i>Edit Akses
                         </a>
-                        <a href="/user/hapus/{{ $row->id }}" onclick="return confirm('Yakin Ingin menghapus data?')" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm">
+
+                        <a href="/user/{{ $row->id }}" onclick="return confirm('Yakin Ingin menghapus data?')" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm">
                             <i class="fas fa-trash-alt fa-sm text-white-50"></i> Hapus
                         </a>
+                        <!-- <form action="/user/{{ $row->id }}" method="POST">
+                            @csrf
+                            @method('delete')
+                            <input type="submit" value="delete" >
+                        </form> -->
                     </td>
                 </tr>
                 @endforeach

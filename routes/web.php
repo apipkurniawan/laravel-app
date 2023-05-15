@@ -26,11 +26,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // User
-Route::get('/user', [UserController::class, 'index'])->name('user');
-Route::resource('user', UserController::class)->parameters([
-    'user' => 'id'
-]);
-// Route::get('/user/hapus/{id}' , 'userController@destroy' );
+Route::resource('/user', UserController::class);
+// Route::delete('/user/{id}' , [UserController::class, 'destroy'] );
 
 // Barang
 Route::get('/barang', [BarangController::class, 'index'])->name('barang');
