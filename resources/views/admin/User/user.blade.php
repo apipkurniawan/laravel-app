@@ -39,11 +39,6 @@
                         <a href="/user/{{ $row->id }}" onclick="return confirm('Yakin Ingin menghapus data?')" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm">
                             <i class="fas fa-trash-alt fa-sm text-white-50"></i> Hapus
                         </a>
-                        <!-- <form action="/user/{{ $row->id }}" method="POST">
-                            @csrf
-                            @method('delete')
-                            <input type="submit" value="delete" >
-                        </form> -->
                     </td>
                 </tr>
                 @endforeach
@@ -63,13 +58,13 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label class="col-lg-20 controllabel">Nama User</label>
+                        <label class="col-lg-20 control-label">Nama User</label>
                         <div class="col-lg-10">
                             <input type="text" name="username" required class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-lg-20 controllabel">Email User</label>
+                        <label class="col-lg-20 control-label">Email User</label>
                         <div class="col-lg-10">
                             <input type="email" name="email" required class="form-control">
                         </div>
@@ -87,7 +82,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light" data-dismiss="modal">Tutup</button>
-                    <button type="submit" class="btn btnprimary">Simpan</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
                 </div>
             </div>
         </form>
