@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Data Barang</h1>
+    <h1 class="h3 mb-0 text-gray-800">Data Supplier</h1>
 </div>
 <hr>
 <div class="card-header py-3" align="right">
@@ -16,25 +16,25 @@
             <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
                 <thead class="thead-dark">
                     <tr>
-                        <th>Kode Barang</th>
-                        <th>Nama Barang</th>
-                        <th>Harga Barang</th>
-                        <th>Stok Barang</th>
+                        <th>Kode Supplier</th>
+                        <th>Nama Supplier</th>
+                        <th>Alamat</th>
+                        <th>Telepon</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($barang as $brg)
+                    @foreach($supplier as $supp)
                     <tr>
-                        <td>{{ $brg->kd_brg}}</td>
-                        <td>{{ $brg->nm_brg}}</td>
-                        <td>{{ number_format($brg->harga)}}</td>
-                        <td>{{ number_format($brg->stok)}}</td>
+                        <td>{{ $supp->kd_supp}}</td>
+                        <td>{{ $supp->nm_supp}}</td>
+                        <td>{{ $supp->alamat}}</td>
+                        <td>{{ $supp->telepon}}</td>
                         <td align="center">
-                            <a href="{{route('barang.edit',[$brg->kd_brg])}}" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm">
+                            <a href="{{route('supplier.edit',[$supp->kd_supp])}}" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm">
                                 <i class="fas fa-edit fa-sm text-white-50"></i> Ubah
                             </a>
-                            <a href="/barang/{{$brg->kd_brg}}" data-confirm-delete="true" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm">
+                            <a href="/supplier/{{$supp->kd_supp}}" data-confirm-delete="true" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm">
                                 <i class="fas fa-trash-alt fa-sm text-white-50"></i> Hapus
                             </a>
                         </td>
@@ -50,7 +50,7 @@
     <div class="modal-dialog modal-dialog-scrollable" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalScrollableTitle">Tambah Data Barang</h5>
+                <h5 class="modal-title" id="exampleModalScrollableTitle">Tambah Data Supplier</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -59,20 +59,20 @@
                 @csrf
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="exampleFormControlInput1">Kode Barang</label>
-                        <input type="text" name="addkdbrg" id="addkdbrg" class="form-control" maxlegth="5" id="exampleFormControlInput1" required>
+                        <label for="exampleFormControlInput1">Kode Supplier</label>
+                        <input type="text" name="addkdsupp" id="addkdsupp" class="form-control" maxlegth="5" id="exampleFormControlInput1" required>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlInput1">Nama Barang</label>
-                        <input type="text" name="addnmbrg" id="addnmbrg" class="form-control" id="exampleFormControlInput1" required>
+                        <label for="exampleFormControlInput1">Nama Supplier</label>
+                        <input type="text" name="addnmsupp" id="addnmsupp" class="form-control" id="exampleFormControlInput1" required>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlInput1">Harga Barang</label>
-                        <input type="number" name="addharga" id="addharga" class="form-control" id="exampleFormControlInput1" required>
+                        <label for="exampleFormControlInput1">Alamat</label>
+                        <input type="text" name="addalamat" id="addalamat" class="form-control" id="exampleFormControlInput1" required>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlInput1">Stok Barang</label>
-                        <input type="number" name="addstok" id="addstok" class="form-control"
+                        <label for="exampleFormControlInput1">Telepon</label>
+                        <input type="number" name="addtelepon" id="addtelepon" class="form-control"
                         id="exampleFormControlInput1" required>
                     </div>
                 </div>

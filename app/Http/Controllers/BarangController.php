@@ -95,9 +95,9 @@ class BarangController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($kd_brg)
     {
-        $barang=Barang::findOrFail($id);
+        $barang=Barang::findOrFail($kd_brg);
         $barang->delete();
         alert()->success('Data Deleted', 'Data barang berhasil dihapus')->toToast();
         return redirect()->route('barang.index');

@@ -62,9 +62,9 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('user.index') }}"> Master User</a>
                         <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('barang.index') }}"> Master Barang</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 3</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 4</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 5</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('supplier.index') }}"> Master Supplier</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Master Akun</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Master Setting Akun</a>
                     </div>
                 </div>
                 @endrole

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\SupplierController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,4 +31,7 @@ Route::resource('/user', UserController::class);
 
 // Barang
 Route::resource('/barang', BarangController::class);
+
+// supplier
+Route::resource('/supplier', SupplierController::class);
 
