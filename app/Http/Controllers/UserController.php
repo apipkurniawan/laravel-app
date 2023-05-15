@@ -58,7 +58,7 @@ class UserController extends Controller
             $save_user->assignRole('user');
         }
         $save_user->save();
-        Alert::success('Informasi ','Data berhasil disimpan!');
+        alert()->success('User Created', 'User berhasil disimpan')->toToast();
         return redirect()->route('user.index');
     }
 
@@ -100,7 +100,7 @@ class UserController extends Controller
         $user = User::find($id);
         DB::table('model_has_roles')->where('model_id',$id)->delete();
         $user->assignRole($request->input('role'));
-        Alert::success('Informasi ','Data berhasil diubah!');
+        alert()->success('User Updated', 'User berhasil diubah')->toToast();
         return redirect()->route('user.index');
     }
 
@@ -115,7 +115,7 @@ class UserController extends Controller
         $hapus = User::findOrFail($id);
         $hapus->delete();
         $hapus->removeRole('admin','user');
-        toast('Data berhasil dihapus!');
+        alert()->success('User Deleted', 'User berhasil dihapus')->toToast();
         return redirect()->route('user.index');
     }
 }
