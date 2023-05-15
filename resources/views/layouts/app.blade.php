@@ -15,7 +15,6 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    @include('sweetalert::alert')
 </head>
 <body>
     <div id="app">
