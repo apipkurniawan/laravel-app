@@ -92,7 +92,7 @@ class SupplierController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  string  $kd_supp
      * @return \Illuminate\Http\Response
      */
     public function destroy($kd_supp)

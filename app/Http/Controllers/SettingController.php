@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Akun;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 
-class AkunController extends Controller
+class SettingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +17,8 @@ class AkunController extends Controller
     public function index()
     {
         $akun=Akun::All();
-        return view('admin.akun.akun',['akun'=>$akun]);
+        $setting=Setting::All();
+        return view('admin.setting.setting' , ['akun' => $akun, 'setting'=> $setting]);
     }
 
     /**
@@ -26,7 +28,7 @@ class AkunController extends Controller
      */
     public function create()
     {
-        return view('admin.akun.input');
+        //
     }
 
     /**
@@ -37,13 +39,7 @@ class AkunController extends Controller
      */
     public function store(Request $request)
     {
-        //untuk menyimpan data
-        $tambah_akun=new Akun;
-        $tambah_akun->no_akun = $request->addnoakun;
-        $tambah_akun->nm_akun = $request->addnmakun;
-        $tambah_akun->save(); // method
-        alert()->success('Data Created', 'Data akun berhasil disimpan')->toToast();
-        return redirect('/akun'); // prosedur
+        //
     }
 
     /**
@@ -65,8 +61,7 @@ class AkunController extends Controller
      */
     public function edit($id)
     {
-        $akun_edit=Akun::findOrFail($id);
-        return view('admin.akun.edit',['akun'=>$akun_edit]);
+        //
     }
 
     /**
@@ -78,25 +73,35 @@ class AkunController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $update_akun = Akun::findOrFail($id);
-        $update_akun->no_akun=$request->addnoakun;
-        $update_akun->nm_akun=$request->addnmakun;
-        $update_akun->save();
-        alert()->success('Data Updated', 'Data akun berhasil diubah')->toToast();
-        return redirect()->route( 'akun.index');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  string  $no_akun
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($no_akun)
+    public function destroy($id)
     {
-        $akun=Akun::findOrFail($no_akun);
-        $akun->delete();
-        alert()->success('Data Deleted', 'Data akun berhasil dihapus')->toToast();
-        return redirect()->route('akun.index');
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function simpan(Request $request)
+    {
+        $kode = $request->kode;
+        $akun = $request->akun;
+        foreach($akun as $key => $no)
+        {
+            $input['no_akun'] = $akun[$key];
+            Setting::where('id_setting',$kode[$key])->update($input);
+        }
+        return redirect('setting');
     }
 }
