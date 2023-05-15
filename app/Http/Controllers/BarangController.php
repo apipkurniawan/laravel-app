@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Barang;
-use Alert;
 
 class BarangController extends Controller
 {
@@ -44,7 +43,7 @@ class BarangController extends Controller
         $tambah_barang->harga = $request->addharga;
         $tambah_barang->stok = $request->addstok;
         $tambah_barang->save();
-        // Alert::success('Pesan ','Data berhasil disimpan');
+        alert()->success('Data Created', 'Data barang berhasil disimpan')->toToast();
         return redirect('/barang');
     }
 
@@ -86,6 +85,7 @@ class BarangController extends Controller
         $barang->harga=$request->get('addharga');
         $barang->stok=$request->get('addstok');
         $barang->save();
+        alert()->success('Data Updated', 'Data barang berhasil diubah')->toToast();
         return redirect()->route('barang.index');
     }
 
@@ -99,7 +99,7 @@ class BarangController extends Controller
     {
         $barang=Barang::findOrFail($id);
         $barang->delete();
-        // Alert::success('Pesan ','Data berhasil dihapus');
+        alert()->success('Data Deleted', 'Data barang berhasil dihapus')->toToast();
         return redirect()->route('barang.index');
     }
 }
