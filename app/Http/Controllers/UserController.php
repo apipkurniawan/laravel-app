@@ -20,6 +20,11 @@ class UserController extends Controller
     public function index()
     {
         $user=User::all();
+
+        $title = 'Konfirmasi';
+        $text = "Apakah yakin ingin menghapus data ini?";
+        confirmDelete($title, $text);
+
         return view('admin.user.user',['user'=>$user]);
     }
 
