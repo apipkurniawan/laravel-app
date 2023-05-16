@@ -16,16 +16,16 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr align="center">
-                        <th width="5%">User Id</th>
+                        <th width="10%">User Id</th>
                         <th width="25%">Nama</th>
                         <th width="20%">Email</th>
-                        <th width="15%">Roles/Akses</th>
+                        <th width="10%">Roles/Akses</th>
                         <th width="25%">Aksi</th>
                     </tr>
                 </thead>
                 <tr>
                 @foreach ($user as $row)
-                    <td>{{$row->id}}</td>
+                    <td align="center">{{$row->id}}</td>
                     <td>{{$row->name}}</td>
                     <td>{{$row->email}}</td>
                     @foreach ($row->roles as $r)
