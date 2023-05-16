@@ -205,7 +205,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Create By: Your Name<br>Copyright &copy; Your Website 2020</span>
+                        <span>Create By: Apip Kurniawan<br>Copyright &copy; Chiday 2023</span>
                     </div>
                 </div>
             </footer>

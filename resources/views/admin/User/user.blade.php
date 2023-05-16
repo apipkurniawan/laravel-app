@@ -33,7 +33,7 @@
                     @endforeach
                     <td align="center">
                         <a href="{{route('user.edit' ,[$row->id])}}" class="d-none d-sm-inline-block btn btn-sm btn-success shadowsm">
-                            <i class="fas fa-edit fa-sm text-white-50"></i>Ubah Akses
+                            <i class="fas fa-edit fa-sm text-white-50"></i> Ubah Akses
                         </a>
 
                         <a href="/user/{{ $row->id }}" data-confirm-delete="true" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm">
