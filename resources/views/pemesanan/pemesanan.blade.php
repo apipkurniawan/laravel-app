@@ -52,7 +52,7 @@
                                 {{$temp->kd_brg}}
                             </td>
                             <td>
-                                <input name="nama" class="form-control" type="hidden" value="{{$temp->nm_brg}}" readonly >{{$temp->nm_brg}}
+                                <input name="nama" class="form-control" type="hidden" value="{{$temp->nm_brg}}" readonly >{{ $temp->nm_brg }}
                             </td>
                             <td>
                                 <input name="qty_pesan[]" class="form-control" type="hidden" value="{{$temp->qty_pesan}}" readonly>{{$temp->qty_pesan}}

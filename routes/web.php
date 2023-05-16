@@ -60,4 +60,4 @@ Route::resource('/pembelian', PembelianController::class);
 
 // Cetak Invoice
 // Route::resource('/cetak', PembelianController::class);
-// Route::get('/laporan/faktur/{invoice}', 'PembelianController@pdf')->name('cetak.order_pdf');
+Route::get('/laporan/faktur/{invoice}', [PembelianController::class, 'pdf'])->name('cetak.order_pdf');
