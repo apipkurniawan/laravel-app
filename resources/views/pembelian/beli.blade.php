@@ -5,7 +5,7 @@
     <h1 class="h3 mb-0 text-gray-800">Pembelian </h1>
 </div>
 <hr>
-<form action="/pembelian/simpan" method="POST">
+<form action="{{ route('pembelian.store') }}" method="POST">
     @csrf
     <div class="form-group col-sm-4">
         <label for="exampleFormControlInput1">No Pembelian</label>

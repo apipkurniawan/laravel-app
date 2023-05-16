@@ -49,7 +49,7 @@ class UserController extends Controller
         $save_user->name=$request->get('username');
         $save_user->email=$request->get('email');
         $save_user->password=bcrypt('password');
-        if ($request->get('roles')=='ADMIN') {
+        if (strtolower($request->get('roles')) === 'admin') {
             # code...
             $save_user->assignRole('admin');
         } else {

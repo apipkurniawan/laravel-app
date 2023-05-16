@@ -130,7 +130,7 @@
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
                             <div class="input-group-append">
-                                <h4>Sistem Informasi Akuntansi PT. XYZ</h4>
+                                <h4>PT. Chiday Tekno Nusantara</h4>
                             </div>
                         </div>
                     </form>

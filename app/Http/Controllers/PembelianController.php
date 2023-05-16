@@ -43,10 +43,10 @@ class PembelianController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    // public function store(Request $request)
+    // {
+    //     //
+    // }
 
     /**
      * Display the specified resource.
@@ -120,7 +120,7 @@ class PembelianController extends Controller
         return $pdf->stream();
     }
 
-    public function simpan(Request $request)
+    public function store(Request $request)
     {
         if (Pembelian::where('no_pesan', $request->no_pesan)->exists()) {
             Alert::warning('Pesan ','Pembelian Telah dilakukan ');

@@ -22,7 +22,7 @@
                         <td width="15%">{{ $pesan->no_pesan }}</td>
                         <td>{{ $pesan->tgl_pesan }}</td>
                         <td width="30%">
-                            <a href="{{url('/pembelian-beli/'.Crypt::encryptString($pesan->no_pesan))}}" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm">
+                            <a href="{{ route('pembelian.edit', [Crypt::encryptString($pesan->no_pesan)] ) }}" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm">
                                 <i class="fas fa-edit fa-sm text-white-50"></i> Beli
                             </a>
                             <a href="#" target="_blank" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm">
