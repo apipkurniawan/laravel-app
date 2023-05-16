@@ -17,17 +17,17 @@ class SettingSeeder extends Seeder
     {
         $setting = Setting::create([
             'id_setting' => '1',
-            'no_akun' => '501',
+            'no_akun' => 'KA1',
             'nama_transaksi' => 'Retur',
         ]);
         $setting = Setting::create([
             'id_setting' => '2',
-            'no_akun' => '500',
+            'no_akun' => 'KA2',
             'nama_transaksi' => 'Pembelian',
         ]);
         $setting = Setting::create([
             'id_setting' => '3',
-            'no_akun' => '101',
+            'no_akun' => 'KA3',
             'nama_transaksi' => 'Kas',
         ]);
     }

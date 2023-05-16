@@ -39,7 +39,14 @@ class SettingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $kode = $request->kode;
+        $akun = $request->akun;
+        foreach($akun as $key => $no)
+        {
+            $input['no_akun'] = $akun[$key];
+            Setting::where('id_setting',$kode[$key])->update($input);
+        }
+        return redirect('setting');
     }
 
     /**
@@ -95,13 +102,6 @@ class SettingController extends Controller
      */
     public function simpan(Request $request)
     {
-        $kode = $request->kode;
-        $akun = $request->akun;
-        foreach($akun as $key => $no)
-        {
-            $input['no_akun'] = $akun[$key];
-            Setting::where('id_setting',$kode[$key])->update($input);
-        }
-        return redirect('setting');
+
     }
 }
