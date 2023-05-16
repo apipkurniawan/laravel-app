@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Laporan extends Model
+class Laporanstok extends Model
 {
     use HasFactory;
 
-    protected $table = "jurnal";
-    protected $fillable = ['no_jurnal','tgl_jurnal','no_akun','debet','kredit'];
+    protected $table = "lap_stok";
+    protected $fillable = ['kd_brg','nm_brg','harga','stok','beli','retur'];
+
 }
