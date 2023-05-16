@@ -9,6 +9,7 @@ use App\Http\Controllers\AkunController;
 use App\Http\Controllers\DetailPesanController;
 use App\Http\Controllers\PembelianController;
 use App\Http\Controllers\PemesananController;
+use App\Http\Controllers\ReturController;
 use App\Http\Controllers\SettingController;
 
 /*
@@ -54,10 +55,9 @@ Route::resource('/detail', DetailPesanController::class);
 
 // pembelian
 Route::resource('/pembelian', PembelianController::class);
-// Route::get('/pembelian', 'PembelianController@index')->name('pembelian.transaksi');
-// Route::get('/pembelian-beli/{id}', 'PembelianController@edit');
-// Route::post('/pembelian/simpan', 'PembelianController@simpan');
 
 // Cetak Invoice
-// Route::resource('/cetak', PembelianController::class);
 Route::get('/laporan/faktur/{invoice}', [PembelianController::class, 'pdf'])->name('cetak.order_pdf');
+
+// Retur
+Route::resource('/retur', ReturController::class);

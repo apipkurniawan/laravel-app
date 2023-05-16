@@ -69,6 +69,7 @@
                 </div>
                 @endrole
             </li>
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages1"
                     aria-expanded="true" aria-controls="collapsePages1">
@@ -80,25 +81,24 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('transaksi.index') }}"> Pemesanan</a>
                         <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('pembelian.index') }}"> Pembelian</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Retur</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="{{ route('retur.index') }}"> Retur</a>
                     </div>
                 </div>
             </li>
 
-            <!-- Nav Item - Tables -->
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Menu Utama 3</span>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages2" aria-expanded="true" aria-controls="collapsePages2">
+                    <i class="fas fa-fw fa-folder-open"></i>
+                    <span>Laporan</span>
                 </a>
-            </li> -->
-
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-archive"></i>
-                    <span>Menu Utama 4</span>
-                </a>
-            </li> -->
+                <div id="collapsePages2" class="collapse" aria-labelledby="headingPages"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Jurnal Umum</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Stok Barang</a>
+                    </div>
+                </div>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
