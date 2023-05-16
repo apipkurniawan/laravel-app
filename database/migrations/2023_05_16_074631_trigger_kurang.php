@@ -15,10 +15,10 @@ return new class extends Migration
     public function up()
     {
         DB::unprepared('
-            CREATE TRIGGER update_stok after INSERT ON detail_pembelian
+            CREATE TRIGGER update_stok_retur after INSERT ON detail_retur
             FOR EACH ROW BEGIN
             UPDATE barang
-            SET stok = stok + NEW.qty_beli
+            SET stok = stok - NEW.qty_retur
             WHERE
             kd_brg = NEW.kd_brg;
             END
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        DB::unprepared('DROP TRIGGER update_stok');
+        DB::unprepared('DROP TRIGGER update_stok_retur');
     }
 };
